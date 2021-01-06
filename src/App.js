@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import style from './App.module.scss'
+import Nav from './components/Nav'
+import "aos/dist/aos.css";
+import AOS from 'aos'
+import axios from 'axios'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [loaderShow, setLoaderShow] = useState(true)
+    console.log(loaderShow)
+    useEffect(() => {
+        AOS.init()
+        setLoaderShow(false)
+        axios.get('https://gh-pinned-repos.now.sh/?username=yunisdev')
+            .then(({data})=>{
+                console.log(data)
+            })
+    }, []);
+    return (
+        <div className={style.container}>
+            <Nav />
+        </div>
+    )
 }
 
-export default App;
+export default App
