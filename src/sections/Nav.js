@@ -3,8 +3,10 @@ import style from './Nav.module.scss'
 
 const Nav = () => {
     const [menuOpened, setMenuOpened] = useState(false)
+    const [activePart, setActivePart] = useState('Hello')
+
     return (
-        <nav className={style.navbar + ' navbar navbar-expand-lg'} data-aos="fade-down" data-aos-delay={500}>
+        <nav className={style.navbar + ' navbar navbar-expand-md navbar-light bg-light'} data-aos="fade-down" data-aos-delay={500}>
             <a className={style.navbar_brand} href="/">yunisdev<span className="dot">.</span></a>
             <button className={style.menu + (menuOpened ? ' ' + style.opened : '') + ' navbar-toggler'} type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={menuOpened} aria-label="Toggle navigation" onClick={() => { setMenuOpened(!menuOpened) }}>
                 <svg viewBox="0 0 100 100">
@@ -16,19 +18,19 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className={style.navbar_nav+" navbar-nav"}>
                     <li className={style.nav_item + ' nav-item'}>
-                        <a className={style.nav_link__active} href="#hello">Hello</a>
+                        <a className={activePart === 'Hello' ? style.nav_link__active : style.nav_link} href="#hello">Hello</a>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
-                        <a className={style.nav_link} href="#about-me">About Me</a>
+                        <a className={activePart === 'About Me' ? style.nav_link__active : style.nav_link} href="#about-me">About Me</a>
                     </li>
                     <li className={style.nav_item}>
-                        <a className={style.nav_link} href="#skills">Skills</a>
+                        <a className={activePart === 'Skills' ? style.nav_link__active : style.nav_link} href="#skills">Skills</a>
                     </li>
                     <li className={style.nav_item}>
-                        <a className={style.nav_link} href="#projects">Projects</a>
+                        <a className={activePart === 'Projects' ? style.nav_link__active : style.nav_link} href="#projects">Projects</a>
                     </li>
                     <li className={style.nav_item}>
-                        <a className={style.nav_link} href="#contact">Contact</a>
+                        <a className={activePart === 'Contact' ? style.nav_link__active : style.nav_link} href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>

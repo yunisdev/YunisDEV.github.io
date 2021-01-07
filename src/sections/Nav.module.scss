@@ -1,4 +1,4 @@
-@import "../_variables.scss";
+@import "../variables";
 @import "bootstrap";
 
 .nav_item{
@@ -13,7 +13,7 @@
 .navbar_nav{
     @extend .ml-auto;
     @media (min-width:992px){
-        min-height: 55px;
+        min-height: 40px;
         align-items: center;
     }
 }
@@ -22,9 +22,10 @@
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 10px;
-    width: calc(100% - 20px);
+    width: calc(100vw - 20px);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
     position: fixed!important;
+    box-sizing: border-box!important;
     top: 0;
     left:0;
     z-index: 9999;
@@ -35,9 +36,6 @@
     @extend .navbar-brand;
     font-weight: 800 !important;
     color: rgba(0,0,0,0.9)!important;
-    &:hover{
-
-    }
 }
 
 .nav_link {
@@ -80,15 +78,15 @@
 }
 
 .menu {
-    background-color: transparent;
-    border: none;
+    background-color: transparent!important;
+    border: none!important;
     cursor: pointer;
     svg {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
     outline: none !important;
-    border: none;
+    padding:0!important;
 }
 .line {
     fill: none;

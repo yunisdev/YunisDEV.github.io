@@ -1,0 +1,27 @@
+@import "../variables";
+
+.education {
+    padding-top: 20px;
+}
+.education__edu {
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    span {
+        color: #ccc;
+        float: right;
+    }
+    display: block;
+}
+.education__divider {
+    height: 1px;
+    width: 100%;
+    background-color: #ececec;
+}
+
+// TODO
+.hobbies_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
