@@ -22,12 +22,12 @@
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 10px;
-    width: calc(100vw - 20px);
+    width: calc(100% - 20px);
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
     position: fixed!important;
     box-sizing: border-box!important;
-    top: 0;
-    left:0;
+    top: 0!important;
+    left:0!important;
     z-index: 9999;
 }
 
@@ -47,6 +47,7 @@
     position: relative;
     width: fit-content;
     padding:8px!important;
+    cursor: pointer!important;
     &::after {
         content: "";
         height: 3px;

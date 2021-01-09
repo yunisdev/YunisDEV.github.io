@@ -1,5 +1,10 @@
 @import "../variables";
 
+:export {
+    gradientFirst: $blue;
+    gradientSecond: $purple-blue-middle;
+}
+
 .card {
     height: 150px;
     border-radius: 20px;
@@ -9,9 +14,12 @@
     box-sizing: border-box;
     display: table;
     cursor: pointer;
-    background: $default-gradient;
+    background: $light-gray;
     .card__inner {
-        color: white !important;
+        background: $default-gradient;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
         font-weight: 700;
         font-size: 20px;
         width: 100%;
@@ -19,8 +27,15 @@
         display: table-cell;
         text-align: center;
         vertical-align: middle;
-        svg{
-            fill:white!important;
+        svg {
+            fill: url(#DefaultGradient) !important;
         }
     }
+}
+
+.card_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
 }

@@ -1,15 +1,16 @@
 @import "../variables";
 
 .header_container {
-    height: 100vh;
+    height: calc(100vh - 100px);
     background: url("../images/wave.svg");
     background-size: cover;
-    background-position: -1000px 0px;
+    background-position: -900px 0px;
     background-repeat: no-repeat;
-    padding: 80px 20px 0px 20px;
+    padding: 180px 20px 0px 20px;
     @media (max-width: 770px) {
         flex-direction: column;
         align-content: space-between !important;
+        padding-top:100px;
     }
     box-sizing: border-box!important;
     > div {
@@ -67,15 +68,17 @@
     height: fit-content;
     position: absolute!important;
     left: 0;
-    bottom: 200px;
+    bottom: 100px;
 }
 .learn_more_btn {
     color: white !important;
-    i {
+    text-decoration: none!important;
+    cursor: pointer;
+    svg {
         transition: all ease 0.3s;
     }
     &:hover {
-        i {
+        svg {
             transform: rotateZ(90deg);
         }
     }

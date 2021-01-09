@@ -9,6 +9,11 @@
     span {
         color: #ccc;
         float: right;
+        @media only screen and (max-width: 790px) {
+            width: 100%;
+            display: block;
+            float: none !important;
+        }
     }
     display: block;
 }
@@ -16,12 +21,4 @@
     height: 1px;
     width: 100%;
     background-color: #ececec;
-}
-
-// TODO
-.hobbies_list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
 }

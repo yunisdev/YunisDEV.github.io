@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import style from './Nav.module.scss'
+import { Link } from 'react-scroll'
+
+export const NavLink = ({ to, children }) => <Link activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} smooth={true} duration={1000}>{children}</Link>
 
 const Nav = () => {
     const [menuOpened, setMenuOpened] = useState(false)
-    const [activePart, setActivePart] = useState('Hello')
 
     return (
         <nav className={style.navbar + ' navbar navbar-expand-md navbar-light bg-light'} data-aos="fade-down" data-aos-delay={500}>
@@ -16,26 +18,25 @@ const Nav = () => {
                 </svg>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className={style.navbar_nav+" navbar-nav"}>
+                <ul className={style.navbar_nav + " navbar-nav"}>
                     <li className={style.nav_item + ' nav-item'}>
-                        <a className={activePart === 'Hello' ? style.nav_link__active : style.nav_link} href="#hello">Hello</a>
+                        <NavLink to="hello" >Hello</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
-                        <a className={activePart === 'About Me' ? style.nav_link__active : style.nav_link} href="#about-me">About Me</a>
+                        <NavLink to="about">About Me</NavLink>
                     </li>
-                    <li className={style.nav_item}>
-                        <a className={activePart === 'Skills' ? style.nav_link__active : style.nav_link} href="#skills">Skills</a>
+                    <li className={style.nav_item + ' nav-item'}>
+                        <NavLink to="skills">Skills</NavLink>
                     </li>
-                    <li className={style.nav_item}>
-                        <a className={activePart === 'Projects' ? style.nav_link__active : style.nav_link} href="#projects">Projects</a>
+                    <li className={style.nav_item + ' nav-item'}>
+                        <NavLink to="projects">Projects</NavLink>
                     </li>
-                    <li className={style.nav_item}>
-                        <a className={activePart === 'Contact' ? style.nav_link__active : style.nav_link} href="#contact">Contact</a>
+                    <li className={style.nav_item + ' nav-item'}>
+                        <NavLink to="contact">Contact</NavLink>
                     </li>
                 </ul>
             </div>
         </nav>
-
     )
 }
 

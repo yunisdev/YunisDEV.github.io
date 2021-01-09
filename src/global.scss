@@ -9,15 +9,15 @@
 body {
     width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden!important;
-    box-sizing: border-box!important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
 }
 
 #root {
     width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden!important;
-    box-sizing: border-box!important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
 }
 
 .row.padding-none {
@@ -57,29 +57,32 @@ body {
 .btnPrimary:active {
     box-shadow: 0px 0px 15px $purple-blue-middle;
 }
-.ctr{
-    margin-left:0!important;
-    margin-right:0!important;
-    padding:0;
-    .block{
-        padding-left:10%!important;
-        padding-right:10%!important;
+.ctr {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0;
+    .block {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
         min-height: calc(100vh - 100px);
-        .inner-content{
-            > div.row{
+        padding-top: 100px;
+        .inner-content {
+            > div.row {
                 padding: 10px 0px 100px 0px;
             }
         }
     }
 }
 h1 {
-    font-weight: 800!important;
-    font-size: 2.5rem!important;
+    font-weight: 800 !important;
+    font-size: 2.5rem !important;
 }
 h2 {
-    font-weight: 700!important;
-    font-size: 23px!important;
+    font-weight: 700 !important;
+    font-size: 23px !important;
 }
-.fa, .far, .fas {
-    font-family: "Font Awesome 5 Free"!important;
+.fa,
+.far,
+.fas {
+    font-family: "Font Awesome 5 Free" !important;
 }
