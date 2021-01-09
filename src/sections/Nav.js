@@ -20,7 +20,7 @@ const Nav = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className={style.navbar_nav + " navbar-nav"}>
                     <li className={style.nav_item + ' nav-item'}>
-                        <NavLink to="hello" >Hello</NavLink>
+                        <NavLink to="hello">Hello</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
                         <NavLink to="about">About Me</NavLink>
