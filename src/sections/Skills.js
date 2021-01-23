@@ -7,11 +7,11 @@ import { isMobile } from 'react-device-detect'
 const Skills = () => {
     return (
         <Section id="skills" header="Skills">
-            <Part title="Programming Languages">
+            <Part title="Languages">
                 <CardList data={skillsProgrammingLanguages} delayConst={isMobile ? 0 : 150} />
             </Part>
             <Part title="Technologies">
-                <CardList data={skillsTechnologies} delayConst={isMobile ? 0 : 150} />
+                <CardList data={skillsTechnologies} delayConst={isMobile ? 0 : 100} />
             </Part>
         </Section>
     )

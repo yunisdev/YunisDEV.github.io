@@ -9,6 +9,11 @@ import Nav from './sections/Nav'
 import Hello from './sections/Hello'
 import About from './sections/About'
 import Skills from './sections/Skills'
+import Projects from './sections/Projects'
+import Contact from './sections/Contact'
+
+// Providers
+import { ToastProvider } from 'react-toast-notifications';
 
 const App = () => {
     const [loaderShow, setLoaderShow] = useState(true)
@@ -22,19 +27,20 @@ const App = () => {
             .then(({ data }) => {
                 console.log(data)
             })
-
-
-
     }, []);
     return (
-        <div className={style.container}>
-            <Nav />
-            <Hello />
-            <div className="ctr">
-                <About />
-                <Skills />
+        <ToastProvider placement="bottom-right">
+            <div className={style.container}>
+                <Nav />
+                <Hello />
+                <div className="ctr">
+                    <About />
+                    <Skills />
+                    <Projects />
+                    <Contact />
+                </div>
             </div>
-        </div>
+        </ToastProvider>
     )
 }
 

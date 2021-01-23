@@ -24,8 +24,9 @@ const About = () => {
                     }
                 </ul>
             </Part>
+
             <Part title="Hobbies">
-                <CardList data={hobbies} delayConst={isMobile ? 0 : 150} />
+                <CardList data={hobbies} delayConst={isMobile ? 0 : 100} />
             </Part>
         </Section>
     )

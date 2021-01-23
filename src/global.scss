@@ -57,6 +57,9 @@ body {
 .btnPrimary:active {
     box-shadow: 0px 0px 15px $purple-blue-middle;
 }
+.btnPrimary:disabled{
+    opacity: .7;
+}
 .ctr {
     margin-left: 0 !important;
     margin-right: 0 !important;

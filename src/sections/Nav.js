@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './Nav.module.scss'
 import { Link } from 'react-scroll'
 
-export const NavLink = ({ to, children }) => <Link activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} smooth={true} duration={1000}>{children}</Link>
+export const NavLink = ({ to, children }) => <Link activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} hashSpy={true} smooth={true} duration={1000}>{children}</Link>
 
 const Nav = () => {
     const [menuOpened, setMenuOpened] = useState(false)
@@ -19,8 +19,8 @@ const Nav = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className={style.navbar_nav + " navbar-nav"}>
-                    <li className={style.nav_item + ' nav-item'}>
-                        <NavLink to="hello">Hello</NavLink>
+                    <li className={style.nav_item + ' nav-item '}>
+                        <NavLink to="hello" className={style.nav_link__active}>Hello</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
                         <NavLink to="about">About Me</NavLink>
