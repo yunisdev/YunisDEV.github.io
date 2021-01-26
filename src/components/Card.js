@@ -33,7 +33,7 @@ export const GithubRepoCard = ({ repo, delay }) => {
     return (
         <div data-aos="flip-left" data-aos-delay={delay} >
             <a href={"https://github.com/" + repo}><img style={{
-                width: 420,
+                width: '100%',
                 margin: 10,
                 marginLeft: 0
             }} alt={repo + ' - Github'} src={"https://gh-card.dev/repos/" + repo + ".svg"} /></a>
@@ -42,7 +42,9 @@ export const GithubRepoCard = ({ repo, delay }) => {
 }
 
 export const GithubRepoCardList = ({ data, delayConst = 0 }) => (
-    <div className={style.card_list} data-aos="fade-right">
+    <div className={style.card_list} style={{
+        paddingRight:10
+    }} data-aos="fade-right">
         {
             data.map((value, index) => (
                 <GithubRepoCard key={value} repo={value} delay={index * delayConst} />

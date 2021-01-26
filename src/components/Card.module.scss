@@ -6,6 +6,9 @@
 }
 
 .card {
+    @media only screen and (max-width: 790px) {
+        width:100%!important;
+    }
     height: 150px;
     border-radius: 20px;
     margin: 10px;
