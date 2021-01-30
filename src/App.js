@@ -11,6 +11,7 @@ import About from './sections/About'
 import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
+import Blog from './sections/Blog'
 
 // Providers
 import { ToastProvider } from 'react-toast-notifications';
@@ -27,6 +28,7 @@ const App = () => {
             .then(({ data }) => {
                 console.log(data)
             })
+        
     }, []);
     return (
         <ToastProvider placement="bottom-right">
@@ -37,6 +39,7 @@ const App = () => {
                     <About />
                     <Skills />
                     <Projects />
+                    <Blog />
                     <Contact />
                 </div>
             </div>

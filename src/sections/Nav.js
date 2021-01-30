@@ -32,6 +32,9 @@ const Nav = () => {
                         <NavLink to="projects">Projects</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
+                        <NavLink to="blog">Blog</NavLink>
+                    </li>
+                    <li className={style.nav_item + ' nav-item'}>
                         <NavLink to="contact">Contact</NavLink>
                     </li>
                 </ul>
