@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import style from './Contact.module.scss'
 import { Section, SectionPart as Part } from '../components/Section'
-import { db } from '../service/firebase'
 import Loader from 'react-loader-spinner'
 import { useToasts } from 'react-toast-notifications'
+import emailjs from 'emailjs-com'
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -17,7 +17,8 @@ const Contact = () => {
     const finalizeSubmit = (message, type) => {
         addToast(message, {
             appearance: type,
-            autoDismiss: true
+            autoDismiss: true,
+            timeout: 500
         })
         setName('')
         setEmail('')
@@ -28,11 +29,11 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoader(true)
-        db.collection('contacts').add({
+        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, {
             name,
             email,
-            message
-        })
+            message,
+        }, process.env.REACT_APP_EMAILJS_USER)
             .then(() => finalizeSubmit('Message has been submitted', 'success'))
             .catch(e => finalizeSubmit(e.message, 'error'))
 
