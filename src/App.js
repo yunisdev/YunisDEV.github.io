@@ -13,6 +13,7 @@ import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import Blog from './sections/Blog'
 import Resume from './sections/Resume';
+import Footer from './sections/Footer';
 
 // Providers
 import { ToastProvider } from 'react-toast-notifications';
@@ -43,6 +44,7 @@ const App = () => {
                     <Projects />
                     <Blog />
                     <Contact />
+                    <Footer />
                 </div>
             </div>
         </ToastProvider>

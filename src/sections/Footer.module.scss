@@ -1,0 +1,17 @@
+.footer {
+    background: url("../images/footer-wave.svg");
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    // background-position: 0 -50px;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    // padding-top:50px!important;
+    p {
+        transform: translateY(15px);
+    }
+}

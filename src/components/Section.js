@@ -1,9 +1,9 @@
 import React from 'react'
 import { Element } from 'react-scroll'
 
-export const Section = ({ id, header, children }) => {
+export const Section = ({ id, header, children,spaceDown=false,className="",...props }) => {
     return (
-        <Element name={id} id={id} className="block col-md-12" data-target="contentPart" data-head-name={header}>
+        <Element name={id} id={id} className={"block col-md-12"+(spaceDown? " mb-4" : "")+" "+ className} data-target="contentPart" data-head-name={header} {...props}>
             <div className="inner-content">
                 <h1 data-aos="fade-right">{header}<span className="dot">.</span></h1>
                 <div className="row" style={{paddingBottom:0}}>

@@ -6,7 +6,7 @@ import { educationData, workData } from '../data'
 
 const Resume = () => {
     return (
-        <Section id="resume" header="Resume">
+        <Section id="resume" header="Resume" className={style.resume}>
             <Part title="Education" className={[style.education, "mb-4"]} aos="fade-up">
                 <ul>
                     {
