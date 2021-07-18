@@ -26,6 +26,9 @@ const Nav = () => {
                         <NavLink to="about">About Me</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>
+                        <NavLink to="resume">Resume</NavLink>
+                    </li>
+                    <li className={style.nav_item + ' nav-item'}>
                         <NavLink to="skills">Skills</NavLink>
                     </li>
                     <li className={style.nav_item + ' nav-item'}>

@@ -6,11 +6,21 @@ import { DiGulp, DiSass } from 'react-icons/di'
 export let educationData = [
     {
         name: 'Pragmatech Education and Development Center',
-        date: 'Aug. 2020 - Present'
+        date: 'August 2020 - January 2021',
+        desc: 'I learned many programming skills and gained a lot of experience here. I also learned how to learn.'
     },
     {
         name: 'School no. 309',
-        date: 'Sep. 2010 - Present'
+        date: 'September 2010 - July 2021',
+        desc: 'I learned first things in my education here.'
+    }
+]
+
+export let workData = [
+    {
+        name: 'Support Team @ Pragmatech Education and Development Center',
+        date: 'November 2021 - January 2021',
+        desc: 'I helped students who has problems with lessons.'
     }
 ]
 

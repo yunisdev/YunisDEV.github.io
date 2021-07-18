@@ -18,7 +18,7 @@ export const CardList = ({ data, delayConst = 0 }) => (
                 <Card key={value.name} text={value.name} icon={value.icon} delay={index * delayConst} />
             ))
         }
-        <svg>
+        <svg height="0" width="0">
             <defs>
                 <linearGradient id="DefaultGradient">
                     <stop offset="5%" stopColor={style.gradientFirst} />
