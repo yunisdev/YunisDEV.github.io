@@ -8,6 +8,8 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'core-js/fn/number/is-nan'; import 'core-js/es7/'; import 'core-js/es6/'; import 'raf/polyfill';
+import firebase from './utils/firebase'
+
 ReactDOM.render(
   <React.StrictMode>
     <Reset />
