@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import style from './App.module.scss'
 import "aos/dist/aos.css";
 import AOS from 'aos'
-import axios from 'axios'
 
 // Parts
 import Nav from './sections/Nav'
@@ -18,19 +17,24 @@ import Footer from './sections/Footer';
 // Providers
 import { ToastProvider } from 'react-toast-notifications';
 
+// Services
+import {db} from './utils/firebase'
+
 const App = () => {
+    // eslint-disable-next-line no-unused-vars
     const [loaderShow, setLoaderShow] = useState(true)
-    console.log(loaderShow)
     useEffect(() => {
+
+        /**
+         * education
+         * work
+         * social
+         */
+
         AOS.init({
             once: true
         })
         setLoaderShow(false)
-        axios.get('https://gh-pinned-repos.now.sh/?username=yunisdev')
-            .then(({ data }) => {
-                console.log(data)
-            })
-
     }, []);
     return (
         <ToastProvider placement="bottom-right">

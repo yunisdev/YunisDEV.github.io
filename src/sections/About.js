@@ -1,10 +1,8 @@
 import React from 'react'
-import style from './About.module.scss'
 import { Section, SectionPart as Part, SectionTextBox as TextBox } from '../components/Section'
 import { CardList } from '../components/Card'
-import { educationData, hobbies } from '../data'
+import { hobbies } from '../data'
 import { isMobile } from 'react-device-detect'
-import MyPhoto from '../images/myimage.jpg'
 
 
 const About = () => {

@@ -1,3 +1,5 @@
+@import "../variables";
+
 .footer {
     background: url("../images/footer-wave.svg");
     height: 50vh;
@@ -13,5 +15,12 @@
     // padding-top:50px!important;
     p {
         transform: translateY(15px);
+        background: $default-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+        width: 100%;
+        font-size: large;
     }
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Section, SectionPart as Part } from '../components/Section'
 import style from './Footer.module.scss'
 
 const Footer = () => {
