@@ -1,33 +1,11 @@
 import React from 'react'
 import style from './Resume.module.scss'
 import { Section, SectionPart as Part } from '../components/Section'
-import { useState, useEffect } from 'react'
-import { db } from '../utils/firebase'
+import { useSelector } from 'react-redux'
 
 const Resume = () => {
-    const [educationData, setEducationData] = useState([])
-    const [workData,setWorkData] = useState([])
-
-    useEffect(() => {
-        db.collection('education').get().then((querySnapshot) => {
-            let data = []
-            querySnapshot.docs.map((doc) => {
-                data.push({ id: parseInt(doc.id), ...doc.data() })
-                return null
-            })
-            data.sort((a,b)=>b.id-a.id)
-            setEducationData(data)
-        })
-        db.collection('work').get().then((querySnapshot) => {
-            let data = []
-            querySnapshot.docs.map((doc) => {
-                data.push({ id: parseInt(doc.id), ...doc.data() })
-                return null
-            })
-            data.sort((a,b)=>b.id-a.id)
-            setWorkData(data)
-        })
-    }, [])
+    const educationData = useSelector(state => state.education)
+    const workData = useSelector(state => state.work)
 
     return (
         <Section id="resume" header="Resume" className={style.resume}>

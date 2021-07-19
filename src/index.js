@@ -17,18 +17,30 @@ import {
 } from "react-router-dom";
 import AdminApp from './admin/AdminApp'
 
+// Setup Redux
+import { createStore } from 'redux'
+import reducer from './state/reducer'
+import { Provider } from 'react-redux'
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store = createStore(
+  reducer, composeWithDevTools()
+)
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <Reset />
-    <Switch>
-      <Route exact path="/">
-        <App />
-      </Route>
-      <Route path="/admin">
-        <AdminApp />
-      </Route>
-    </Switch>
+      <Reset />
+      <Switch>
+        <Route exact path="/">
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </Route>
+        <Route path="/admin">
+          <AdminApp />
+        </Route>
+      </Switch>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

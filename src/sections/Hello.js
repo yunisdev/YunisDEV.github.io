@@ -6,8 +6,10 @@ import { Link } from 'react-scroll'
 import MyPhoto from '../images/myimage.jpg'
 import SocialButton from '../components/SocialButton'
 import BlobbedPhoto from '../components/BlobbedPhoto'
+import { useSelector } from 'react-redux'
 
 const Hello = () => {
+    const socialData = useSelector(state => state.social)
     return (
         <header id="hello" className={style.header_container + " row"} data-aos="fade-down">
             <div className={style.header__image + " col-md-6 mb-md-4"} data-aos="fade-right" data-aos-delay={1000}>
@@ -19,21 +21,15 @@ const Hello = () => {
                     <p>My name is <span>Yunis.</span></p>
                     <p>I'm <span>Web Developer.</span></p>
                     <div className={style.socialButtons}>
-                        <SocialButton name="Telegram" url="https://t.me/yunisdev" color="#0088CC">
-                            <FaTelegramPlane color="white" />
-                        </SocialButton>
-                        <SocialButton name="Github" url="https://github.com/yunisdev" color="#211F1F">
-                            <FaGithub color="white" />
-                        </SocialButton>
-                        <SocialButton name="Linkedin" url="https://www.linkedin.com/in/yunisdev/" color="#2867B2">
-                            <FaLinkedinIn color="white" />
-                        </SocialButton>
-                        <SocialButton name="Medium" url="https://yunisdev.medium.com/" color="#000000">
-                            <FaMediumM color="white" />
-                        </SocialButton>
-                        <SocialButton name="Facebook" url="https://www.facebook.com/yunisdev" color="#4267b2">
-                            <FaFacebookF color="white" />
-                        </SocialButton>
+                        {
+                            socialData.map((value, index) => {
+                                return (
+                                    <SocialButton key={value.id} name={value.name} url={value.url} color={value.color}>
+                                        <span dangerouslySetInnerHTML={{ __html: value.icon }}></span>
+                                    </SocialButton>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
