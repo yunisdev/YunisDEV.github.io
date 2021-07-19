@@ -15,6 +15,7 @@ import Contact from './sections/Contact'
 import Blog from './sections/Blog'
 import Resume from './sections/Resume';
 import Footer from './sections/Footer';
+import Loader from './components/Loader'
 
 // Providers
 import { ToastProvider } from 'react-toast-notifications';
@@ -68,6 +69,7 @@ const App = () => {
     }, [dispatch]);
     return (
         <ToastProvider placement="bottom-right">
+            {loaderShow && <Loader />}
             <div className={style.container}>
                 <Nav />
                 <Hello />

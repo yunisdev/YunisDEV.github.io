@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Hello.module.scss'
 // import headerIllustration from '../images/header-illustration.svg'
-import { FaArrowRight, FaFacebookF, FaGithub, FaMediumM, FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa'
+import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import MyPhoto from '../images/myimage.jpg'
 import SocialButton from '../components/SocialButton'
