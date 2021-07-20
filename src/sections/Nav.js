@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import style from './Nav.module.scss'
 import { Link } from 'react-scroll'
 
-export const NavLink = ({ to, children }) => <Link activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} hashSpy={false} smooth={true} duration={1000}>{children}</Link>
+export const NavLink = ({ to, children }) => <Link activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} hashSpy={true} smooth={true} duration={1000}>{children}</Link>
 
 const Nav = () => {
     const [menuOpened, setMenuOpened] = useState(false)
