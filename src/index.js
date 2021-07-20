@@ -11,8 +11,8 @@ import 'core-js/fn/number/is-nan'; import 'core-js/es7/'; import 'core-js/es6/';
 // eslint-disable-next-line no-unused-vars
 import firebase from './utils/firebase'
 import {
-  BrowserRouter as Router,
-  // HashRouter as Router,
+  // BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
@@ -30,15 +30,15 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Reset />
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL + "/"}>
+        <Route exact path="/">
           <Provider store={store}>
             <App />
           </Provider>
         </Route>
-        <Route path={process.env.PUBLIC_URL + "/admin"}>
+        <Route>
           <AdminApp />
         </Route>
       </Switch>
@@ -50,4 +50,4 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(console.log);
