@@ -12,6 +12,7 @@ import 'core-js/fn/number/is-nan'; import 'core-js/es7/'; import 'core-js/es6/';
 import firebase from './utils/firebase'
 import {
   BrowserRouter as Router,
+  // HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
