@@ -33,12 +33,12 @@ ReactDOM.render(
     <Router>
       <Reset />
       <Switch>
-        <Route exact path="/">
+        <Route exact path={process.env.PUBLIC_URL + "/"}>
           <Provider store={store}>
             <App />
           </Provider>
         </Route>
-        <Route path="/admin">
+        <Route path={process.env.PUBLIC_URL + "/admin"}>
           <AdminApp />
         </Route>
       </Switch>
