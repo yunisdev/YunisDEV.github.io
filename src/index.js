@@ -33,7 +33,9 @@ ReactDOM.render(
     <Router basename={process.env.PUBLIC_URL}>
       <Reset />
       <Switch>
-        <Route exact path={["/","/hello","/about","/resume","/skills","/projects","/blogs","/contact"]}>
+        <Route exact path={
+          ["/","/hello","/about","/resume","/skills","/projects","/blogs","/contact"]
+        }>
           <Provider store={store}>
             <App />
           </Provider>

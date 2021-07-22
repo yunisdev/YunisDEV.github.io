@@ -12,7 +12,6 @@ import firebase from '../utils/firebase'
 import LoginPage from './LoginPage'
 
 const options = {
-    logging: true,
     app: firebase
 }
 const dataProvider = FirebaseDataProvider(firebaseConfig, options)

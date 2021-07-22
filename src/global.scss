@@ -24,14 +24,6 @@ body {
     padding-bottom: 10px !important;
 }
 
-.dot {
-    font-weight: 800 !important;
-    background: $default-gradient;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -58,8 +50,8 @@ body {
     box-shadow: 0px 0px 15px $purple-blue-middle;
     // transform: scale(1.05);
 }
-.btnPrimary:disabled{
-    opacity: .7;
+.btnPrimary:disabled {
+    opacity: 0.7;
 }
 .ctr {
     margin-left: 0 !important;

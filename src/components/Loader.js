@@ -26,8 +26,8 @@ const LoaderInner = styled.div`
     border-radius:50%;
     width:80px;
     height:80px;
-    border: 10px solid #ececec;
-    border-top: 10px solid #5BB8EA;
+    border: 10px solid ${props => props.theme.gray};
+    border-top: 10px solid ${props => props.theme.blue};
     animation: ${animation} 2s linear infinite;
 `
 
