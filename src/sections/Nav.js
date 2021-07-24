@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import style from './Nav.module.scss'
 import { Link as ScrollLink } from 'react-scroll'
 import Dot from '../components/Dot'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Toggler from '../components/NavbarToggler'
 
-export const Link = ({ to, children }) => <ScrollLink activeClass={style.nav_link__active} className={style.nav_link} to={to} spy={true} hashSpy={true} smooth={true} duration={1000}>{children}</ScrollLink>
-
+export const Link = ({ to, children }) => <ScrollLink activeClass={style.nav_link__active+" nav-link"} className={style.nav_link+" nav-link"} to={to} spy={true} hashSpy={true} smooth={true} duration={1000}>{children}</ScrollLink>
 
 const NavBrand = styled.a`
     font-weight: 800 !important;

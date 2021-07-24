@@ -4,6 +4,8 @@ class Theme {
     purpleBlueMiddle = "#718bdc"
     gray = "#ececec"
     black = "#222222"
+    midGray = "#949494"
+    darkGray = "rgb(100, 100, 100)"
     constructor() {
         this.defaultGradient = `linear-gradient(90deg, ${this.blue}, ${this.purpleBlueMiddle}, ${this.purple})`
     }

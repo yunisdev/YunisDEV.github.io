@@ -17,7 +17,7 @@ export const Section = ({ id, header, children, spaceDown = false, className = "
 
 export const SectionPart = ({ children, title = false, className = [], aos = "", colSize = 12 }) => {
     return (
-        <div className={`col-md-${colSize} ` + className.join(' ')} data-aos={aos}>
+        <div className={`col-md-${colSize} ` + (className.join ? className.join(' ') : className)} data-aos={aos}>
             {title ? <h2 className="mb-2" data-aos="fade-right">{title}</h2> : null}
             {children}
         </div>

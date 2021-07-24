@@ -1,17 +1,21 @@
 import React from 'react'
 import { Section, SectionPart as Part } from '../components/Section'
-// import { GithubRepoCardList } from '../components/Card'
-// import { jsPackages } from '../data'
-// import { isMobile } from 'react-device-detect'
-import style from './Projects.module.scss'
+import styled from 'styled-components'
+import projectWave from '../images/wave-back-2.svg'
+
+const ProjectsWrapper = styled(Section)`
+    background: url(${projectWave});
+    background-repeat: no-repeat;
+    background-size: cover;
+`
 
 const Projects = () => {
     return (
-        <Section id="projects" header="Projects" className={style.projects}>
+        <ProjectsWrapper id="projects" header="Projects">
             <Part title="Javascript Packages">
-                
+
             </Part>
-        </Section>
+        </ProjectsWrapper>
     )
 }
 

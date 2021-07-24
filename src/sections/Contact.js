@@ -1,9 +1,46 @@
 import React, { useState } from 'react'
-import style from './Contact.module.scss'
 import { Section, SectionPart as Part } from '../components/Section'
 import Loader from 'react-loader-spinner'
 import { useToasts } from 'react-toast-notifications'
 import emailjs from 'emailjs-com'
+import styled from 'styled-components'
+
+const ContactForm = styled.form`
+    width: 100%;
+    @media (max-width: 770px) {
+        > *{
+            width: 100%!important;
+        }
+    }
+`
+
+const FormBody = styled.div`
+    width: 500px;
+    * {
+        display: block;
+        width: 100%;
+    }
+`
+
+const TextArea = styled.textarea`
+    padding: 7px 15px;
+    background-color: ${props => props.theme.gray};
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0.25rem;
+`
+
+const Input = styled.input`
+    padding: 7px 15px;
+    background-color: ${props => props.theme.gray};
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0.25rem;
+`
+
+const Label = styled.label`
+    padding: 5px 0px;
+`
 
 const Contact = () => {
     const [name, setName] = useState('')
@@ -42,16 +79,16 @@ const Contact = () => {
     return (
         <Section id="contact" header="Contact">
             <Part aos="fade-right">
-                <form className={style.contactForm} onSubmit={handleSubmit}>
-                    <div className={style.formBody}>
-                        <label htmlFor="name">Name</label>
-                        <input required type="text" id="name" placeholder="Name..." value={name} onChange={(e) => { setName(e.target.value) }} />
+                <ContactForm onSubmit={handleSubmit}>
+                    <FormBody>
+                        <Label htmlFor="name">Name</Label>
+                        <Input required type="text" id="name" placeholder="Name..." value={name} onChange={(e) => { setName(e.target.value) }} />
 
-                        <label htmlFor="email">E-mail</label>
-                        <input required type="text" id="email" placeholder="E-mail..." value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                        <Label htmlFor="email">E-mail</Label>
+                        <Input required type="text" id="email" placeholder="E-mail..." value={email} onChange={(e) => { setEmail(e.target.value) }} />
 
-                        <label htmlFor="message">Message</label>
-                        <textarea required rows={5} columns={20} type="text" id="message" placeholder="Message..." value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
+                        <Label htmlFor="message">Message</Label>
+                        <TextArea required rows={5} columns={20} type="text" id="message" placeholder="Message..." value={message} onChange={(e) => { setMessage(e.target.value) }}></TextArea>
 
                         <button type="submit" className="btnPrimary">{
                             loader
@@ -65,8 +102,8 @@ const Contact = () => {
                                 : "Submit"
                         }
                         </button>
-                    </div>
-                </form>
+                    </FormBody>
+                </ContactForm>
             </Part>
         </Section>
     )

@@ -1,12 +1,6 @@
 @import "../variables";
-@import "bootstrap";
-
-.navbar_nav{
-    @extend .ml-auto;
-}
 
 .nav_link {
-    @extend .nav-link;
     color: rgba(0, 0, 0, 0.3) !important;
     transition: 0.3s all ease !important;
     font-weight: 700 !important;
@@ -36,7 +30,6 @@
 }
 
 .nav_link__active {
-    @extend .nav_link;
     font-weight: 700 !important;
     background: $default-gradient;
     transition: 0.3s all ease !important;
